@@ -34,13 +34,14 @@ navigator.mediaDevices
     socket.on("user-connected", (userId) => {
       connectToNewUser(userId, stream);
     });
+    
   });
 
 
 
 
 
-  
+
 peer.on('open', id => {
     console.log(id);
     socket.emit("join-room", ROOM_ID, id);
